@@ -58,7 +58,7 @@ export const currencyApi = api.injectEndpoints({
 			transformResponse: (response: Array<any>) => {
 				return response.map(getCurrencyFromData);
 			},
-			providesTags: (result, error) =>
+			providesTags: (result) =>
 				result
 					? [
 							{ type: 'Currency', id: 'LIST' },
@@ -87,7 +87,7 @@ export const currencyApi = api.injectEndpoints({
 		}),
 		getInstitution: build.query<InstitutionInfo, void>({
 			query: () => '/about',
-			transformResponse: (response: any, error) => {
+			transformResponse: (response: any) => {
 				const { institute, baseCurrency } = response[0];
 				return {
 					name: institute,

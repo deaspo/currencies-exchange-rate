@@ -23,7 +23,9 @@ export const SearchResultsListItem = ({ currencyInfo }: IProps) => {
 					<span className="text-xl">{currency}</span>
 					<div className="flex items-center w-full gap-2">
 						<div>
-							<span className="text-xl">{country}</span>
+							<span className="text-xl">
+								{country} - {countryCode}
+							</span>
 						</div>
 						<div className="">
 							<img className="h-4 w-4" src={flagUrlPath} alt="flag" />

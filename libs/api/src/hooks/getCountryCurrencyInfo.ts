@@ -3,9 +3,6 @@ import { getCountryCode } from 'countries-list';
 import { code as getCountryInfoCode } from 'currency-codes';
 import { Currency, CurrencyInfo } from '../currencyApi';
 
-interface IProps {
-	currencyInfo: Currency;
-}
 export const GetCountryCurrencyInfo = (
 	currencyInfo: Currency
 ): CurrencyInfo => {

@@ -7,8 +7,7 @@ import { useSearchParams } from 'react-router-dom';
 import { SearchResultsListItem } from '../searchResultsListItem';
 
 export const SearchResultsList = () => {
-	const { currencyInfo, error, isLoading, isFetching } =
-		useGetCountryCurrencyInfoList();
+	const { currencyInfo } = useGetCountryCurrencyInfoList();
 
 	const [searchParam] = useSearchParams();
 	const searchValue = searchParam.get('currency') ?? '';
