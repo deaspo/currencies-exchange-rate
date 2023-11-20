@@ -8,7 +8,8 @@
 		"test": "nx test",
 		"e2e": "npx nx run e2e:e2e --watch=true",
 		"e2e-headless": "cd e2e && cypress run --headless",
-		"server": "json-server --watch data/fx.json --port 4201"
+		"server": "json-server --watch data/fx.json --port 4201",
+		"setup": "npm ci"
 	},
 	"private": true,
 	"dependencies": {
