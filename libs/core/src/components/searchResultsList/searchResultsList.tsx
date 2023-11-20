@@ -22,7 +22,10 @@ export const SearchResultsList = () => {
 
 	return (
 		<section className="flex flex-col flex-grow h-full mb-24">
-			<div className="w-full mx-auto items-start max-w-7xl flex flex-col text-gray-900 dark:text-gray-700">
+			<div
+				data-testid="search-results-list"
+				className="w-full mx-auto items-start max-w-7xl flex flex-col text-gray-900 dark:text-gray-700"
+			>
 				<ListItems
 					itemsList={filteredCurrencies}
 					listItemRowContent={listRowItemRendered}

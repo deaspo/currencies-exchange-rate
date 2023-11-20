@@ -24,7 +24,8 @@
       "executor": "@nx/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "currencies-exchange-rate:build"
+        "buildTarget": "currencies-exchange-rate:build",
+        "port": 4300
       },
       "configurations": {
         "development": {

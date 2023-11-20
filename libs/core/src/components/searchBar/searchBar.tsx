@@ -20,6 +20,7 @@ export const SearchBar = () => {
 					<div className="w-full p-3">
 						<div className="relative">
 							<input
+								data-testid="search-input-field"
 								type="search"
 								id="default-search"
 								className="w-full px-4 text-sm text-gray-900 border border-gray-300 rounded-md bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"

@@ -16,7 +16,10 @@ export const SearchResultsListItem = ({ currencyInfo }: IProps) => {
 	} = currencyInfo;
 
 	return (
-		<div className="flex items-center shadow-md rounded-lg px-4 py-2 my-2 gap-5 bg-gray-100 w-full ">
+		<div
+			data-testid="search-results-list-item"
+			className="flex items-center shadow-md rounded-lg px-4 py-2 my-2 gap-5 bg-gray-100 w-full "
+		>
 			<div className="w-full flex gap-10 items-center">
 				<CreateAvatar currency={currencyCode} />
 				<div className="flex flex-col justify-center p-3">
