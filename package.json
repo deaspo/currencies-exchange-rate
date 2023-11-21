@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"license": "MIT",
 	"scripts": {
-		"start": "nx serve --open",
+		"start": "npm install && nx serve --open",
 		"build": "nx build",
 		"test": "nx test",
 		"e2e": "npx nx run e2e:e2e --watch=true",

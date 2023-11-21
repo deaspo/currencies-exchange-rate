@@ -3,3 +3,4 @@ export * from './apiService';
 export * from './currencyApi';
 export * from './store';
 export * from './hooks';
+export * from './utils';
