@@ -86,7 +86,7 @@ export const currencyApi = api.injectEndpoints({
 			],
 		}),
 		getInstitution: build.query<InstitutionInfo, void>({
-			query: () => '/about',
+			query: () => '/institutions',
 			transformResponse: (response: any) => {
 				const { institute, baseCurrency } = response[0];
 				return {
