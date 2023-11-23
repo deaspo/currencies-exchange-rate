@@ -23,15 +23,22 @@ export const SearchResultsListItem = ({ currencyInfo }: IProps) => {
 			<div className="w-full flex gap-10 items-center">
 				<CreateAvatar currency={currencyCode} />
 				<div className="flex flex-col justify-center p-3">
-					<span className="text-xl">{currency}</span>
+					<span data-testid="currency" className="text-xl">
+						{currency}
+					</span>
 					<div className="flex items-center w-full gap-2">
 						<div>
-							<span className="text-xl">
+							<span data-testid="country-code" className="text-xl">
 								{country} - {countryCode}
 							</span>
 						</div>
 						<div className="">
-							<img className="h-4 w-4" src={flagUrlPath} alt="flag" />
+							<img
+								data-testid="country-flag-img"
+								className="h-4 w-4"
+								src={flagUrlPath}
+								alt="flag"
+							/>
 						</div>
 					</div>
 				</div>
@@ -40,7 +47,9 @@ export const SearchResultsListItem = ({ currencyInfo }: IProps) => {
 				<span className="text-sm font-semibold whitespace-nowrap">
 					Exchange Rate
 				</span>
-				<span className="text base">{exchangeRate?.sell}</span>
+				<span data-testid="exchange-rate" className="text base">
+					{exchangeRate?.sell}
+				</span>
 			</div>
 		</div>
 	);

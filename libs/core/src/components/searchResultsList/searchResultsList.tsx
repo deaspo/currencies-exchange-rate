@@ -7,7 +7,8 @@ import { useSearchParams } from 'react-router-dom';
 import { SearchResultsListItem } from '../searchResultsListItem';
 
 export const SearchResultsList = () => {
-	const { currencyInfo } = useGetCountryCurrencyInfoList();
+	const { currencyInfo, isLoading, isFetching } =
+		useGetCountryCurrencyInfoList();
 
 	const [searchParam] = useSearchParams();
 	const searchValue = searchParam.get('currency') ?? '';
@@ -19,6 +20,8 @@ export const SearchResultsList = () => {
 	const listRowItemRendered = (idx: number, currencyInfo: CurrencyInfo) => (
 		<SearchResultsListItem key={idx} currencyInfo={currencyInfo} />
 	);
+
+	if (isFetching) return <div>Loading ...</div>;
 
 	return (
 		<section className="flex flex-col flex-grow h-full mb-24">
