@@ -45,6 +45,9 @@ Run `npm run build` to build the application. The build artifacts will be stored
 
 ## Tests
 
+** Note **
+- server has to be running before running the tests. 
+
 For E2E test, using Cypress run:
 
 `npm run e2e`
