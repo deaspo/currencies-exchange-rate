@@ -1,79 +1,79 @@
 {
-  "name": "currencies-exchange-rate",
-  "$schema": "node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "./src",
-  "projectType": "application",
-  "targets": {
-    "build": {
-      "executor": "@nx/vite:build",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
-      "options": {
-        "outputPath": "dist/currencies-exchange-rate"
-      },
-      "configurations": {
-        "development": {
-          "mode": "development"
-        },
-        "production": {
-          "mode": "production"
-        }
-      }
-    },
-    "serve": {
-      "executor": "@nx/vite:dev-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "currencies-exchange-rate:build",
-        "port": 4300
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "currencies-exchange-rate:build:development",
-          "hmr": true
-        },
-        "production": {
-          "buildTarget": "currencies-exchange-rate:build:production",
-          "hmr": false
-        }
-      }
-    },
-    "preview": {
-      "executor": "@nx/vite:preview-server",
-      "defaultConfiguration": "development",
-      "options": {
-        "buildTarget": "currencies-exchange-rate:build"
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "currencies-exchange-rate:build:development"
-        },
-        "production": {
-          "buildTarget": "currencies-exchange-rate:build:production"
-        }
-      }
-    },
-    "test": {
-      "executor": "@nx/vite:test",
-      "outputs": ["{options.reportsDirectory}"],
-      "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "coverage/currencies-exchange-rate"
-      }
-    },
-    "lint": {
-      "executor": "@nx/eslint:lint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
-      }
-    },
-    "serve-static": {
-      "executor": "@nx/web:file-server",
-      "options": {
-        "buildTarget": "currencies-exchange-rate:build"
-      }
-    }
-  },
-  "tags": []
+	"name": "currencies-exchange-rate",
+	"$schema": "node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "./src",
+	"projectType": "application",
+	"targets": {
+		"build": {
+			"executor": "@nx/vite:build",
+			"outputs": ["{options.outputPath}"],
+			"defaultConfiguration": "production",
+			"options": {
+				"outputPath": "dist/currencies-exchange-rate"
+			},
+			"configurations": {
+				"development": {
+					"mode": "development"
+				},
+				"production": {
+					"mode": "production"
+				}
+			}
+		},
+		"serve": {
+			"executor": "@nx/vite:dev-server",
+			"defaultConfiguration": "development",
+			"options": {
+				"buildTarget": "currencies-exchange-rate:build",
+				"port": 4300
+			},
+			"configurations": {
+				"development": {
+					"buildTarget": "currencies-exchange-rate:build:development",
+					"hmr": true
+				},
+				"production": {
+					"buildTarget": "currencies-exchange-rate:build:production",
+					"hmr": false
+				}
+			}
+		},
+		"preview": {
+			"executor": "@nx/vite:preview-server",
+			"defaultConfiguration": "development",
+			"options": {
+				"buildTarget": "currencies-exchange-rate:build"
+			},
+			"configurations": {
+				"development": {
+					"buildTarget": "currencies-exchange-rate:build:development"
+				},
+				"production": {
+					"buildTarget": "currencies-exchange-rate:build:production"
+				}
+			}
+		},
+		"lint": {
+			"executor": "@nx/eslint:lint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["./src/**/*.{ts,tsx,js,jsx}"]
+			}
+		},
+		"serve-static": {
+			"executor": "@nx/web:file-server",
+			"options": {
+				"buildTarget": "currencies-exchange-rate:build"
+			}
+		},
+		"test": {
+			"executor": "@nx/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectName}"],
+			"options": {
+				"jestConfig": "jest.config.js",
+				"watchAll": true
+			}
+		}
+	},
+	"tags": []
 }
